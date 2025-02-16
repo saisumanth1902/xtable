@@ -9,24 +9,23 @@ function App() {
     { date: "2020-09-03", views: 200, article: "Article 4" },
   ]);
 
-  // Sort by Date (latest dates first, then views descending for same date)
+  
   const sortByDate = () => {
     const sortedData = [...data].sort((a, b) => {
       if (a.date === b.date) {
-        return b.views - a.views; // Sort by views if dates are same
+        return b.views - a.views; 
       }
-      return new Date(b.date) - new Date(a.date); // Sort by date (latest first)
+      return new Date(b.date) - new Date(a.date);
     });
     setData(sortedData);
   };
 
-  // Sort by Views (highest views first, then dates descending for same views)
   const sortByViews = () => {
     const sortedData = [...data].sort((a, b) => {
       if (a.views === b.views) {
-        return new Date(b.date) - new Date(a.date); // Sort by date if views are same
+        return new Date(b.date) - new Date(a.date); 
       }
-      return b.views - a.views; // Sort by views (highest first)
+      return b.views - a.views;
     });
     setData(sortedData);
   };

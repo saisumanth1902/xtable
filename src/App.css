@@ -6,7 +6,7 @@
 }
 
 table {
-  margin: 20px auto; /* Centers the table horizontally */
+  margin: 20px auto; 
   border-collapse: collapse;
   width: 60%;
 }
